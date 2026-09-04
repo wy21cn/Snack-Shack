@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The Snack Shack student lunch menu. Pick up fresh snacks in the school main quad at 12:15 PM." />
+    <meta name="theme-color" content="#17372d" />
+    <title>The Snack Shack | Student Lunch Menu</title>
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow">Lunch break’s best stop</p>
+        <h1><span>The</span> Snack Shack</h1>
+        <p class="intro">Good snacks. Friendly prices. Right in the quad.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu-section" aria-labelledby="menu-heading">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Today’s picks</p>
+            <h2 id="menu-heading">Grab something good.</h2>
+          </div>
+
+          <aside class="pickup-callout" aria-label="Pickup time">
+            <span class="pickup-label">Ready for pickup</span>
+            <strong>12:15 PM</strong>
+            <span class="pickup-note">until 1:15 PM</span>
+          </aside>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal">
+            <div class="food-photo food-photo--1" role="img" aria-label="Ridged sea salt potato chips in a paper tray"></div>
+            <div class="card-content">
+              <div><h3>Sea Salt Chips</h3><p>Classic ridged chips with a salty crunch.</p></div>
+              <p class="price" aria-label="1 dollar and 50 cents">$1.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="food-photo food-photo--2" role="img" aria-label="Nacho cheese tortilla chips in a paper tray"></div>
+            <div class="card-content">
+              <div><h3>Nacho Chips</h3><p>Bold cheesy flavor in every triangle.</p></div>
+              <p class="price" aria-label="1 dollar and 50 cents">$1.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="food-photo food-photo--3" role="img" aria-label="Spicy red rolled tortilla chips in a paper tray"></div>
+            <div class="card-content">
+              <div><h3>Spicy Rollers</h3><p>Rolled, crunchy, and seriously spicy.</p></div>
+              <p class="price" aria-label="2 dollars">$2</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="food-photo food-photo--4" role="img" aria-label="Lightly salted popcorn in a paper cup"></div>
+            <div class="card-content">
+              <div><h3>Kettle Popcorn</h3><p>Light, crisp, and perfectly salted.</p></div>
+              <p class="price" aria-label="1 dollar and 50 cents">$1.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="food-photo food-photo--5" role="img" aria-label="Colorful gummy candy mix in a paper cup"></div>
+            <div class="card-content">
+              <div><h3>Gummy Mix</h3><p>A sweet, chewy mix of fruity favorites.</p></div>
+              <p class="price" aria-label="1 dollar and 25 cents">$1.25</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="payment-note">Cash at pickup · While supplies last</p>
+      </section>
+
+      <section class="location-section" aria-labelledby="location-heading">
+        <div class="location-card reveal">
+          <p class="location-pin" aria-hidden="true">✦</p>
+          <p class="kicker">Find us at lunch</p>
+          <h2 id="location-heading">School Main Quad</h2>
+          <p>Look for The Snack Shack table in the main quad. Your snacks will be ready from <strong>12:15 PM–1:15 PM.</strong></p>
+          <p class="location-detail">Bring cash · Bring a friend · Come hungry</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>The Snack Shack <span aria-hidden="true">·</span> Student-run, lunch-approved.</p>
+    </footer>
+  </body>
+</html>

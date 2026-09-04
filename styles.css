@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+:root {
+  --forest: #17372d;
+  --forest-deep: #102820;
+  --cream: #f4eddd;
+  --paper: #fffaf0;
+  --mustard: #d9a441;
+  --rust: #b85c38;
+  --ink: #1e2a24;
+  --muted: #69726a;
+  --line: rgba(30, 42, 36, 0.14);
+  --shadow: 0 18px 45px rgba(24, 43, 35, 0.11);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.site-header {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1.25rem 3.4rem;
+  background: var(--forest);
+  color: var(--paper);
+  text-align: center;
+}
+
+.site-header::before,
+.site-header::after {
+  position: absolute;
+  content: "";
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid rgba(244, 237, 221, 0.12);
+  border-radius: 50%;
+}
+
+.site-header::before { top: -8rem; left: -5rem; }
+.site-header::after { right: -5rem; bottom: -9rem; }
+.header-inner { position: relative; z-index: 1; max-width: 70rem; margin: 0 auto; }
+
+.eyebrow,
+.kicker {
+  margin: 0 0 0.55rem;
+  color: var(--mustard);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 0.65rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(3.2rem, 11vw, 7.4rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.86;
+}
+
+h1 span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--mustard);
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.17em;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.intro { margin: 0; color: rgba(255, 250, 240, 0.76); font-size: clamp(0.95rem, 2vw, 1.12rem); }
+
+.menu-section {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+}
+
+.section-heading {
+  display: grid;
+  gap: 1.4rem;
+  align-items: end;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.65rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pickup-callout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: var(--mustard);
+  box-shadow: 0 8px 0 var(--rust);
+  color: var(--forest-deep);
+}
+
+.pickup-label,
+.pickup-note { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.pickup-callout strong { grid-row: span 2; font-family: "Fraunces", Georgia, serif; font-size: clamp(1.9rem, 7vw, 2.8rem); line-height: 1; }
+.pickup-note { color: rgba(16, 40, 32, 0.65); }
+
+.menu-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+.menu-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.15rem;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.food-photo {
+  aspect-ratio: 1;
+  background-image: url("assets/snack-grid.png?v=2");
+  background-repeat: no-repeat;
+  background-size: 300% 200%;
+  filter: saturate(0.86) contrast(0.96);
+}
+
+.food-photo--1 { background-position: 0% 0%; }
+.food-photo--2 { background-position: 50% 0%; }
+.food-photo--3 { background-position: 100% 0%; }
+.food-photo--4 { background-position: 0% 100%; }
+.food-photo--5 { background-position: 50% 100%; }
+.food-photo--6 { background-position: 100% 100%; }
+
+.card-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.15rem 1.15rem 1.25rem;
+}
+
+.card-content h3 { margin-bottom: 0.25rem; font-family: "Fraunces", Georgia, serif; font-size: 1.35rem; line-height: 1.1; }
+.card-content p:not(.price) { margin-bottom: 0; color: var(--muted); font-size: 0.85rem; }
+.price { flex: 0 0 auto; margin: 0; color: var(--rust); font-family: "Fraunces", Georgia, serif; font-size: 1.65rem; font-weight: 900; line-height: 1; }
+.payment-note { margin: 1.65rem 0 0; color: var(--muted); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.09em; text-align: center; text-transform: uppercase; }
+
+.location-section { padding: 0 1.25rem 1.25rem; background: linear-gradient(var(--cream) 28%, var(--forest-deep) 28%); }
+
+.location-card {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: clamp(2.2rem, 7vw, 4.5rem) 1.5rem;
+  border-radius: 1.35rem;
+  background: var(--rust);
+  box-shadow: 0 22px 55px rgba(12, 30, 24, 0.22);
+  color: var(--paper);
+  text-align: center;
+}
+
+.location-card .kicker { color: var(--forest-deep); }
+.location-card h2 { margin-bottom: 1rem; font-size: clamp(2.6rem, 8vw, 5.5rem); }
+.location-card > p:not(.kicker, .location-pin, .location-detail) { max-width: 38rem; margin: 0 auto 1.35rem; color: rgba(255, 250, 240, 0.82); font-size: clamp(1rem, 2vw, 1.15rem); }
+.location-card strong { color: #fff; }
+.location-pin { margin: 0 0 1rem; color: var(--mustard); font-size: 2rem; }
+.location-detail { margin: 0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
+
+footer { padding: 2.2rem 1rem; background: var(--forest-deep); color: rgba(255, 250, 240, 0.55); text-align: center; }
+footer p { margin: 0; font-size: 0.78rem; letter-spacing: 0.06em; }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 560ms ease, transform 560ms ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (min-width: 640px) {
+  .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .section-heading { grid-template-columns: 1fr auto; }
+  .pickup-callout { min-width: 20rem; }
+}
+
+@media (min-width: 960px) {
+  .site-header { padding-block: 3.7rem 4.2rem; }
+  .menu-section { padding-top: 3.5rem; }
+  .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
